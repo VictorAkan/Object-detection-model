@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Multiple Object detection using pre-trained model</h2>
+
+    <header class="notes">
+        <h2>Difficulty: Easy</h2>
+    </header>
+    
+    <div>
+        <h2>How to use</h2>
+        <p>Wait for the pre-trained model to load before use</p>
+    </div>
+
+    <section id="demos" class="invisible">
+        <h2>Demo: Classifying images</h2>
+        <p><em>Click on an image below</em> to view an object with even an importance that you can see the position and how many the objects are.</p>
+
+        <div class="classifyOnClick">
+            <img src="https://cdn.glitch.com/74418d0b-3465-49a2-8c71-a721b7734473%2Fdoggo.jpg?v=1592266725716" crossorigin="anonymous" title="Click to get classification!">
+        </div>
+        <div class="classifyOnClick">
+            <img src="https://cdn.glitch.com/74418d0b-3465-49a2-8c71-a721b7734473%2Fcoupledog.jpg?v=1591311552891" crossorigin="anonymous" title="Click to get classification!" />
+        </div>
+
+        <h2>Demo: webcam continuous classification</h2>
+        <p>Hold some objects close to your webcam to get a classification. You must be 
+            on the <a href="https://glitch.com/~tensorflow-js-object-detection">https version of the website</a> for this work. Don't forget to enable your webcam.
+        </p>
+
+        <div id="liveView" class="videoView">
+            <button id="webcamButton">Enable Webcam</button>
+            <video id="webcam" autoplay></video>
+        </div>
+    </section>
+
+    <footer class="note">
+        <p>
+            <em>Please Note:</em> This demo loads a desired ML model from a <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd">javaScript easy to use</a> made by the TensorFlow.js team
+        </p>
+        <p>
+            <a href="https://glitch.com/~tensorflow-js-object-detection">See the README.md or the project page for more information</a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> <!-- pulling in tensorflow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script> <!-- pulling in the model class -->
+
+    <script src="script.js"></script>
+</body>
+</html>
